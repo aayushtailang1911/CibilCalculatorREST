@@ -1,0 +1,14 @@
+5/11
+
+-dao (model,attribute,Subject)
+
+Git -> Aayush (+comments)
+branches : Master, development , feature/<feature-name>/<dev Credentials>
+
+
+model -> Sarvesh	
+attribute -> Aayush
+subject -> Pruthvi
+
+-service
+-controller(CRUD operations) 
