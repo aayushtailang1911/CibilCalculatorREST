@@ -8,21 +8,20 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
-@Table(name = "attribute")
+/**
+ * POJO representation for Attributes in Model Registry json file
+ */
+public class Attribute implements Serializable{
 
-public class Attribute {
-
-    @Column(name = "name",nullable = false,unique = true)
     private String name;
 
-    @Column(name = "required",nullable = false)
     private Boolean required;
 
-    @Column(name = "nullable")
     private Boolean nullable;
 
 }
