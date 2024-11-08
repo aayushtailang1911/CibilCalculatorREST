@@ -17,7 +17,10 @@ configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
 	}
+
 }
+
+
 
 repositories {
 	mavenCentral()
@@ -31,7 +34,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	compileOnly 'org.projectlombok:lombok'
-	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+//	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 //	developmentOnly 'org.springframework.boot:spring-boot-docker-compose'
 	runtimeOnly 'org.postgresql:postgresql'
 	annotationProcessor 'org.projectlombok:lombok'
@@ -40,8 +43,12 @@ dependencies {
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 	implementation group: 'org.apache.spark', name: 'spark-core_2.13', version: '3.3.1'
 	compileOnly group: 'org.apache.spark', name: 'spark-sql_2.13', version: '3.3.1'
+//	testImplementation group: 'org.apache.hadoop', name: 'hadoop-hdfs', version: '3.3.4'
+//	implementation group: 'org.apache.hadoop', name: 'hadoop-common', version: '3.3.4'
 }
+//
+//tasks.named('test') {
+//	useJUnitPlatform()
+//}
 
-tasks.named('test') {
-	useJUnitPlatform()
-}
+

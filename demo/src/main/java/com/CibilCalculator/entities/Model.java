@@ -11,7 +11,6 @@ import java.util.Set;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
 /**
  * POJO representation for Model in Model Registry json file
  */
