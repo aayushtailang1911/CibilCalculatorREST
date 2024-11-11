@@ -16,7 +16,7 @@ public class WritingAdapter implements IWriter{
     }
 
     public IWriter getWriter(String format){
-        if(format.equals("csv")){
+        if(format.contains("csv")){
             return new CSVWriter();
         }
         else {

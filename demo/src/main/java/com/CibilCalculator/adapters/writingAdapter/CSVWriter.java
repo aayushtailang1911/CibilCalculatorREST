@@ -1,9 +1,11 @@
 package com.CibilCalculator.adapters.writingAdapter;
 
 import com.CibilCalculator.entities.Attribute;
+import com.CibilCalculator.entities.OutputSubject;
 import org.apache.hadoop.fs.PathNotFoundException;
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Encoders;
+import com.CibilCalculator.helpers.AttributeHelperClass;
 
 import java.io.IOException;
 import java.util.List;
@@ -26,7 +28,7 @@ public class CSVWriter implements IWriter{
     private Dataset<OutputSubject> formatToOutputDataset(Dataset<?> outputDataset, List<Attribute> attributeList){
         outputDataset = outputDataset.as(Encoders.bean(OutputSubject.class));
 
-        return AttributeHelper.addAttributeColumns(outputDataset,AttributeHelper.getAttributeNames(attributeList));
+        return AttributeHelperClass.addAttributeColumns(outputDataset,AttributeHelperClass.getAttributeNames(attributeList));
     }
 
     private static void writeCsvWithOverwrite(String outputStoragePath, Dataset<?> outputDataset) throws PathNotFoundException,IOException {
