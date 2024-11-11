@@ -1,5 +1,9 @@
 package com.CibilCalculator.entities;
 
+import com.CibilCalculator.modeldata.IAttribute;
+
+import java.util.List;
+
 public class OutputSubject {
     private String userId;
     private volatile int cibilScore;
