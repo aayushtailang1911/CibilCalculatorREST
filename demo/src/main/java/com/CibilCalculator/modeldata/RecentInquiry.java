@@ -1,4 +1,4 @@
-package com.CibilCalculator.modelData;
+package com.CibilCalculator.modeldata;
 
 public class RecentInquiry implements IAttribute{
 
