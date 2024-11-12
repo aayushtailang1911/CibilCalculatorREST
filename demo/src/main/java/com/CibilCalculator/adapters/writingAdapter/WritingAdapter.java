@@ -19,8 +19,11 @@ public class WritingAdapter implements IWriter{
         if(format.contains("csv")){
             return new CSVWriter();
         }
-        else {
+        else if(format.contains("parquet")){
             return new ParquetWriter();
+        }
+        else{
+            return null;
         }
     }
 
