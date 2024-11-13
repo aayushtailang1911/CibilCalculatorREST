@@ -20,8 +20,8 @@ public class Attribute implements Serializable{
 
     private String name;
 
-    private Boolean required;
+    private boolean required;
 
-    private Boolean nullable;
+    private boolean nullable;
 
 }
